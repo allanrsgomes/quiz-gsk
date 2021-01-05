@@ -1,0 +1,1079 @@
+<div class="pure-u-1">
+
+    <style>
+        .box-produto {
+            display: none;
+        }
+        
+        .search-result__drop {
+            display: none;
+        }
+        
+        .search-result__mobile {
+            display: none;
+        }
+        
+        .pagination {
+            display: none;
+        }
+        
+        #quiz-gsk {
+            position: relative;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin: 0 auto;
+            max-width: 960px;
+            font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+        
+        #quiz-gsk .quiz-gsk-section1 {
+            height: 320px;
+            background-image: linear-gradient(to right, #F99532, #FF7846, #F99532);
+        }
+        
+        #quiz-gsk .quiz-gsk-section1 .logo-gsk {
+            position: absolute;
+            top: 2%;
+            left: 2%;
+        }
+        
+        #quiz-gsk .quiz-gsk-section1 .flat-gsk {
+            text-align: center;
+            padding: 50px 10px 10px 10px;
+        }
+        
+        #quiz-gsk .quiz-gsk-section1 .vitamina-ideal {
+            text-align: center;
+            padding: 20px 41px 20px 41px;
+            font-size: 30px;
+        }
+        
+        #quiz-gsk .quiz-gsk-section1 .responda-descubra {
+            text-align: center;
+            padding: 0px 41px 10px 41px;
+            font-size: 20px;
+        }
+        
+        #quiz-gsk .quiz-gsk-section1 .down-arrow {
+            text-align: center;
+            padding: 10px;
+        }
+        
+        #quiz-gsk .quiz-gsk-section2 {
+            height: auto;
+            background: #F36633;
+            padding: 10px 60px;
+        }
+        
+        #quiz-gsk .quiz-gsk-section2 .title {
+            font-size: 22px;
+            padding: 30px 0;
+        }
+        
+        #quiz-gsk .quiz-gsk-section2 .conteudo {
+            border-bottom: 1px solid #FF8F67;
+            padding: 20px 0px 40px 0;
+        }
+        
+        #quiz-gsk .quiz-gsk-section2 .conteudo .idade,
+        #quiz-gsk .quiz-gsk-section2 .conteudo .genero,
+        #quiz-gsk .quiz-gsk-section2 .conteudo .beneficio {
+            display: block;
+            justify-content: left;
+        }
+        
+        #quiz-gsk .quiz-gsk-section2 .box-gsk {
+            background-color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 10px;
+            width: auto;
+            height: auto;
+            position: relative;
+            padding: 18px 70px 18px 20px;
+            color: #F36633;
+            box-shadow: 0px 3px 6px #00000029;
+            margin: 0 15px 20px 0;
+        }
+        
+        #quiz-gsk .quiz-gsk-section2 label {
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+        }
+        
+        #quiz-gsk .quiz-gsk-section2 input[type=checkbox] {
+            display: none;
+        }
+        
+        #quiz-gsk .quiz-gsk-section2 label:before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 2px solid #F36633;
+            position: absolute;
+            bottom: 66%;
+            right: 23%;
+            background-color: #FFFFFF;
+            top: 35%;
+            right: 20px;
+        }
+        
+        #quiz-gsk .quiz-gsk-section2 input[type=checkbox]:checked+label:before {
+            content: "\2022";
+            background-color: #E63D00;
+            border: 2px solid #FFFFFF;
+            color: #FFFFFF;
+            font-size: 32px;
+            text-align: center;
+            line-height: 11px;
+        }
+        
+        #quiz-gsk .quiz-gsk-section2 .resultado button {
+            border-radius: 30px;
+            padding: 15px 50px;
+            margin: 50px;
+            outline: none;
+            background-image: linear-gradient(to right, #007F90, #066672);
+            color: #FFFFFF;
+            font-size: 18px;
+        }
+        
+        #quiz-gsk .quiz-gsk-section2 .resultado {
+            height: 130px;
+            text-align: center;
+        }
+        
+        #quiz-gsk .quiz-gsk-section2 .resultado button[type="submit"]:disabled {
+            opacity: 20%;
+        }
+        
+        @media screen and (max-width: 700px) {
+            #quiz-gsk .quiz-gsk-section1 {
+                height: 430px;
+            }
+            #quiz-gsk .quiz-gsk-section2 .resultado button {
+                margin: 50px 0;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        function marcaDesmarca(id) {
+            if (id == "dezoito") {
+                document.getElementById('cinquenta').checked = false;
+                document.getElementById('homem').checked = false;
+                document.getElementById('mulher').checked = false;
+                document.getElementById('naocomentar').checked = false;
+                document.getElementById('muscular').checked = false;
+                document.getElementById('unhasecabelos').checked = false;
+                document.getElementById('imunidade').checked = false;
+                document.getElementById('energiaedesposicao').checked = false;
+                document.getElementById('desenvolvimento').checked = false;
+                document.getElementById('fortalecimento').checked = false;
+                document.getElementById('saudepele').checked = false;
+                document.getElementById('metabolismo').checked = false;
+                document.getElementById('visao').checked = false;
+            } else if (id == "cinquenta") {
+                document.getElementById('dezoito').checked = false;
+                document.getElementById('homem').checked = false;
+                document.getElementById('mulher').checked = false;
+                document.getElementById('naocomentar').checked = false;
+                document.getElementById('muscular').checked = false;
+                document.getElementById('unhasecabelos').checked = false;
+                document.getElementById('imunidade').checked = false;
+                document.getElementById('energiaedesposicao').checked = false;
+                document.getElementById('desenvolvimento').checked = false;
+                document.getElementById('fortalecimento').checked = false;
+                document.getElementById('saudepele').checked = false;
+                document.getElementById('metabolismo').checked = false;
+                document.getElementById('visao').checked = false;
+            } else if (id == "homem") {
+                document.getElementById('mulher').checked = false;
+                document.getElementById('naocomentar').checked = false;
+                document.getElementById('muscular').checked = false;
+                document.getElementById('unhasecabelos').checked = false;
+                document.getElementById('imunidade').checked = false;
+                document.getElementById('energiaedesposicao').checked = false;
+                document.getElementById('desenvolvimento').checked = false;
+                document.getElementById('fortalecimento').checked = false;
+                document.getElementById('saudepele').checked = false;
+                document.getElementById('metabolismo').checked = false;
+                document.getElementById('visao').checked = false;
+            } else if (id == "mulher") {
+                document.getElementById('homem').checked = false;
+                document.getElementById('naocomentar').checked = false;
+                document.getElementById('muscular').checked = false;
+                document.getElementById('unhasecabelos').checked = false;
+                document.getElementById('imunidade').checked = false;
+                document.getElementById('energiaedesposicao').checked = false;
+                document.getElementById('desenvolvimento').checked = false;
+                document.getElementById('fortalecimento').checked = false;
+                document.getElementById('saudepele').checked = false;
+                document.getElementById('metabolismo').checked = false;
+                document.getElementById('visao').checked = false;
+            } else if (id == "naocomentar") {
+                document.getElementById('homem').checked = false;
+                document.getElementById('mulher').checked = false;
+                document.getElementById('muscular').checked = false;
+                document.getElementById('unhasecabelos').checked = false;
+                document.getElementById('imunidade').checked = false;
+                document.getElementById('energiaedesposicao').checked = false;
+                document.getElementById('desenvolvimento').checked = false;
+                document.getElementById('fortalecimento').checked = false;
+                document.getElementById('saudepele').checked = false;
+                document.getElementById('metabolismo').checked = false;
+                document.getElementById('visao').checked = false;
+            }
+        }
+
+        function dezoito() {
+            if (document.getElementById('dezoito').checked == false) {
+                document.getElementById('div_1').style.backgroundColor = '#E63D00';
+                document.getElementById('div_1').style.color = '#FFFFFF';
+                document.getElementById('div_2').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_2').style.color = '#F36633';
+                document.getElementById('div_3').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_3').style.color = '#F36633';
+                document.getElementById('div_4').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_4').style.color = '#F36633';
+                document.getElementById('div_5').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_5').style.color = '#F36633';
+                document.getElementById('div_6').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_6').style.color = '#F36633';
+                document.getElementById('div_7').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_7').style.color = '#F36633';
+                document.getElementById('div_8').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_8').style.color = '#F36633';
+                document.getElementById('div_9').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_9').style.color = '#F36633';
+                document.getElementById('div_10').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_10').style.color = '#F36633';
+                document.getElementById('div_11').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_11').style.color = '#F36633';
+                document.getElementById('div_12').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_12').style.color = '#F36633';
+                document.getElementById('div_13').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_13').style.color = '#F36633';
+                document.getElementById('div_14').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_14').style.color = '#F36633';
+            } else if (document.getElementById('dezoito').checked == true) {
+                document.getElementById('div_1').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_1').style.color = '#F36633';
+                document.getElementById('div_3').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_3').style.color = '#F36633';
+                document.getElementById('div_4').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_4').style.color = '#F36633';
+                document.getElementById('div_5').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_5').style.color = '#F36633';
+                document.getElementById('div_6').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_6').style.color = '#F36633';
+                document.getElementById('div_7').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_7').style.color = '#F36633';
+                document.getElementById('div_8').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_8').style.color = '#F36633';
+                document.getElementById('div_9').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_9').style.color = '#F36633';
+                document.getElementById('div_10').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_10').style.color = '#F36633';
+                document.getElementById('div_11').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_11').style.color = '#F36633';
+                document.getElementById('div_12').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_12').style.color = '#F36633';
+                document.getElementById('div_13').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_13').style.color = '#F36633';
+                document.getElementById('div_14').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_14').style.color = '#F36633';
+            }
+        }
+
+        function cinquenta() {
+            if (document.getElementById('cinquenta').checked == false) {
+                document.getElementById('div_2').style.backgroundColor = '#E63D00';
+                document.getElementById('div_2').style.color = '#FFFFFF';
+                document.getElementById('div_1').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_1').style.color = '#F36633';
+                document.getElementById('div_3').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_3').style.color = '#F36633';
+                document.getElementById('div_4').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_4').style.color = '#F36633';
+                document.getElementById('div_5').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_5').style.color = '#F36633';
+                document.getElementById('div_6').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_6').style.color = '#F36633';
+                document.getElementById('div_7').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_7').style.color = '#F36633';
+                document.getElementById('div_8').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_8').style.color = '#F36633';
+                document.getElementById('div_9').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_9').style.color = '#F36633';
+                document.getElementById('div_10').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_10').style.color = '#F36633';
+                document.getElementById('div_11').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_11').style.color = '#F36633';
+                document.getElementById('div_12').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_12').style.color = '#F36633';
+                document.getElementById('div_13').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_13').style.color = '#F36633';
+                document.getElementById('div_14').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_14').style.color = '#F36633';
+            } else if (document.getElementById('cinquenta').checked == true) {
+                document.getElementById('div_2').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_2').style.color = '#F36633';
+                document.getElementById('div_3').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_3').style.color = '#F36633';
+                document.getElementById('div_4').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_4').style.color = '#F36633';
+                document.getElementById('div_5').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_5').style.color = '#F36633';
+                document.getElementById('div_6').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_6').style.color = '#F36633';
+                document.getElementById('div_7').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_7').style.color = '#F36633';
+                document.getElementById('div_8').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_8').style.color = '#F36633';
+                document.getElementById('div_9').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_9').style.color = '#F36633';
+                document.getElementById('div_10').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_10').style.color = '#F36633';
+                document.getElementById('div_11').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_11').style.color = '#F36633';
+                document.getElementById('div_12').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_12').style.color = '#F36633';
+                document.getElementById('div_13').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_13').style.color = '#F36633';
+                document.getElementById('div_14').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_14').style.color = '#F36633';
+            }
+        }
+
+        function homem() {
+            if (document.getElementById('homem').checked == false) {
+                document.getElementById('div_3').style.backgroundColor = '#E63D00';
+                document.getElementById('div_3').style.color = '#FFFFFF';
+                document.getElementById('div_4').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_4').style.color = '#F36633';
+                document.getElementById('div_5').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_5').style.color = '#F36633';
+                document.getElementById('div_6').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_6').style.color = '#F36633';
+                document.getElementById('div_7').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_7').style.color = '#F36633';
+                document.getElementById('div_8').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_8').style.color = '#F36633';
+                document.getElementById('div_9').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_9').style.color = '#F36633';
+                document.getElementById('div_10').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_10').style.color = '#F36633';
+                document.getElementById('div_11').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_11').style.color = '#F36633';
+                document.getElementById('div_12').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_12').style.color = '#F36633';
+                document.getElementById('div_13').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_13').style.color = '#F36633';
+                document.getElementById('div_14').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_14').style.color = '#F36633';
+            } else if (document.getElementById('homem').checked == true) {
+                document.getElementById('div_3').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_3').style.color = '#F36633';
+                document.getElementById('div_4').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_4').style.color = '#F36633';
+                document.getElementById('div_5').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_5').style.color = '#F36633';
+                document.getElementById('div_6').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_6').style.color = '#F36633';
+                document.getElementById('div_7').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_7').style.color = '#F36633';
+                document.getElementById('div_8').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_8').style.color = '#F36633';
+                document.getElementById('div_9').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_9').style.color = '#F36633';
+                document.getElementById('div_10').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_10').style.color = '#F36633';
+                document.getElementById('div_11').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_11').style.color = '#F36633';
+                document.getElementById('div_12').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_12').style.color = '#F36633';
+                document.getElementById('div_13').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_13').style.color = '#F36633';
+                document.getElementById('div_14').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_14').style.color = '#F36633';
+            }
+        }
+
+        function mulher() {
+            if (document.getElementById('mulher').checked == false) {
+                document.getElementById('div_4').style.backgroundColor = '#E63D00';
+                document.getElementById('div_4').style.color = '#FFFFFF';
+                document.getElementById('div_3').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_3').style.color = '#F36633';
+                document.getElementById('div_5').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_5').style.color = '#F36633';
+                document.getElementById('div_6').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_6').style.color = '#F36633';
+                document.getElementById('div_7').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_7').style.color = '#F36633';
+                document.getElementById('div_8').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_8').style.color = '#F36633';
+                document.getElementById('div_9').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_9').style.color = '#F36633';
+                document.getElementById('div_10').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_10').style.color = '#F36633';
+                document.getElementById('div_11').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_11').style.color = '#F36633';
+                document.getElementById('div_12').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_12').style.color = '#F36633';
+                document.getElementById('div_13').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_13').style.color = '#F36633';
+                document.getElementById('div_14').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_14').style.color = '#F36633';
+            } else if (document.getElementById('mulher').checked == true) {
+                document.getElementById('div_4').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_4').style.color = '#F36633';
+                document.getElementById('div_6').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_6').style.color = '#F36633';
+                document.getElementById('div_7').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_7').style.color = '#F36633';
+                document.getElementById('div_8').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_8').style.color = '#F36633';
+                document.getElementById('div_9').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_9').style.color = '#F36633';
+                document.getElementById('div_10').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_10').style.color = '#F36633';
+                document.getElementById('div_11').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_11').style.color = '#F36633';
+                document.getElementById('div_12').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_12').style.color = '#F36633';
+                document.getElementById('div_13').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_13').style.color = '#F36633';
+                document.getElementById('div_14').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_14').style.color = '#F36633';
+            }
+        }
+
+        function naocomentar() {
+            if (document.getElementById('naocomentar').checked == false) {
+                document.getElementById('div_5').style.backgroundColor = '#E63D00';
+                document.getElementById('div_5').style.color = '#FFFFFF';
+                document.getElementById('div_3').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_3').style.color = '#F36633';
+                document.getElementById('div_4').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_4').style.color = '#F36633';
+                document.getElementById('div_6').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_6').style.color = '#F36633';
+                document.getElementById('div_7').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_7').style.color = '#F36633';
+                document.getElementById('div_8').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_8').style.color = '#F36633';
+                document.getElementById('div_9').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_9').style.color = '#F36633';
+                document.getElementById('div_10').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_10').style.color = '#F36633';
+                document.getElementById('div_11').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_11').style.color = '#F36633';
+                document.getElementById('div_12').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_12').style.color = '#F36633';
+                document.getElementById('div_13').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_13').style.color = '#F36633';
+                document.getElementById('div_14').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_14').style.color = '#F36633';
+            } else if (document.getElementById('naocomentar').checked == true) {
+                document.getElementById('div_5').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_5').style.color = '#F36633';
+                document.getElementById('div_6').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_6').style.color = '#F36633';
+                document.getElementById('div_7').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_7').style.color = '#F36633';
+                document.getElementById('div_8').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_8').style.color = '#F36633';
+                document.getElementById('div_9').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_9').style.color = '#F36633';
+                document.getElementById('div_10').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_10').style.color = '#F36633';
+                document.getElementById('div_11').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_11').style.color = '#F36633';
+                document.getElementById('div_12').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_12').style.color = '#F36633';
+                document.getElementById('div_13').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_13').style.color = '#F36633';
+                document.getElementById('div_14').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_14').style.color = '#F36633';
+            }
+
+        }
+
+
+        function muscular() {
+            if (document.getElementById('muscular').checked == false) {
+                document.getElementById('div_6').style.backgroundColor = '#E63D00';
+                document.getElementById('div_6').style.color = '#FFFFFF';
+            } else if (document.getElementById('muscular').checked == true) {
+                document.getElementById('div_6').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_6').style.color = '#F36633';
+            }
+        }
+
+        function unhasecabelos() {
+            if (document.getElementById('unhasecabelos').checked == false) {
+                document.getElementById('div_7').style.backgroundColor = '#E63D00';
+                document.getElementById('div_7').style.color = '#FFFFFF';
+            } else if (document.getElementById('unhasecabelos').checked == true) {
+                document.getElementById('div_7').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_7').style.color = '#F36633';
+            }
+        }
+
+        function imunidade() {
+            if (document.getElementById('imunidade').checked == false) {
+                document.getElementById('div_8').style.backgroundColor = '#E63D00';
+                document.getElementById('div_8').style.color = '#FFFFFF';
+            } else if (document.getElementById('imunidade').checked == true) {
+                document.getElementById('div_8').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_8').style.color = '#F36633';
+            }
+        }
+
+        function energiaedesposicao() {
+            if (document.getElementById('energiaedesposicao').checked == false) {
+                document.getElementById('div_9').style.backgroundColor = '#E63D00';
+                document.getElementById('div_9').style.color = '#FFFFFF';
+            } else if (document.getElementById('energiaedesposicao').checked == true) {
+                document.getElementById('div_9').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_9').style.color = '#F36633';
+            }
+        }
+
+        function desenvolvimento() {
+            if (document.getElementById('desenvolvimento').checked == false) {
+                document.getElementById('div_10').style.backgroundColor = '#E63D00';
+                document.getElementById('div_10').style.color = '#FFFFFF';
+            } else if (document.getElementById('desenvolvimento').checked == true) {
+                document.getElementById('div_10').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_10').style.color = '#F36633';
+            }
+        }
+
+        function fortalecimento() {
+            if (document.getElementById('fortalecimento').checked == false) {
+                document.getElementById('div_11').style.backgroundColor = '#E63D00';
+                document.getElementById('div_11').style.color = '#FFFFFF';
+            } else if (document.getElementById('fortalecimento').checked == true) {
+                document.getElementById('div_11').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_11').style.color = '#F36633';
+            }
+        }
+
+        function saudepele() {
+            if (document.getElementById('saudepele').checked == false) {
+                document.getElementById('div_12').style.backgroundColor = '#E63D00';
+                document.getElementById('div_12').style.color = '#FFFFFF';
+            } else if (document.getElementById('saudepele').checked == true) {
+                document.getElementById('div_12').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_12').style.color = '#F36633';
+            }
+        }
+
+        function metabolismo() {
+            if (document.getElementById('metabolismo').checked == false) {
+                document.getElementById('div_13').style.backgroundColor = '#E63D00';
+                document.getElementById('div_13').style.color = '#FFFFFF';
+            } else if (document.getElementById('metabolismo').checked == true) {
+                document.getElementById('div_13').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_13').style.color = '#F36633';
+            }
+        }
+
+        function visao() {
+            if (document.getElementById('visao').checked == false) {
+                document.getElementById('div_14').style.backgroundColor = '#E63D00';
+                document.getElementById('div_14').style.color = '#FFFFFF';
+            } else if (document.getElementById('visao').checked == true) {
+                document.getElementById('div_14').style.backgroundColor = '#FFFFFF';
+                document.getElementById('div_14').style.color = '#F36633';
+            }
+        }
+
+        function habilitaBtn() {
+
+            if ((document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('unhasecabelos').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('desenvolvimento').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('saudepele').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('metabolismo').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('visao').checked == true) ||
+
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('unhasecabelos').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('desenvolvimento').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('saudepele').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('metabolismo').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('visao').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('unhasecabelos').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('desenvolvimento').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('saudepele').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('metabolismo').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('visao').checked == true) ||
+
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('unhasecabelos').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('desenvolvimento').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('saudepele').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('metabolismo').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('visao').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('unhasecabelos').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('desenvolvimento').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('saudepele').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('metabolismo').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('visao').checked == true) ||
+
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('unhasecabelos').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('desenvolvimento').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('saudepele').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('metabolismo').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('visao').checked == true)
+            ) {
+                document.getElementById('avancar').disabled = false;
+                console.log("Habilitado");
+
+            } else {
+                document.getElementById('avancar').disabled = true;
+                console.log("Desabilitado");
+            }
+
+        }
+
+        function redirect() {
+            if ((document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('metabolismo').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('metabolismo').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('metabolismo').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('metabolismo').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('metabolismo').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('metabolismo').checked == true)
+            ) {
+                window.open("https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=GSK%20magnesio%20e%20omega");
+            } else if ((document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('saudepele').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('saudepele').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('saudepele').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('saudepele').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('saudepele').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('saudepele').checked == true)
+            ) {
+                window.open("https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=GSK%20vitamina%20e%20colageno");
+            } else if ((document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true)
+            ) {
+                window.open("https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=GSK%20vitamina%20b");
+            } else if ((document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('imunidade').checked == true)
+            ) {
+                window.open("https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=GSK%20vitamina%20c");
+            } else if ((document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true)
+
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('muscular').checked == true)
+            ) {
+                window.open("https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=%20GSK%20vitaminas%20osseas");
+            } else if ((document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('desenvolvimento').checked == true)
+            ) {
+                window.open("https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=GSK%20vitaminas%20gestantes%20infantis");
+            } else if ((document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true)
+            ) {
+                window.open("https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=GSK%20homem%2018%20a%2050%20anos");
+            } else if ((document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('unhasecabelos').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true)
+            ) {
+                window.open("https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=%20GSK%20mulher%2018%20a%2050%20anos");
+            } else if ((document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('visao').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('homem').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true)
+            ) {
+                window.open("https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=%20GSK%20homem%2050%20anos%20ou%20mais");
+            } else if ((document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('visao').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('mulher').checked == true) &&
+                (document.getElementById('unhasecabelos').checked == true)
+            ) {
+                window.open("https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=%20GSK%20mulher%2050%20anos%20ou%20mais");
+            } else if ((document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('muscular').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('imunidade').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+                (document.getElementById('dezoito').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('unhasecabelos').checked == true)
+            ) {
+                window.open("https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=%20GSK%20vitaminas%2018%20a%2050%20anos");
+            } else if ((document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('fortalecimento').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('visao').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('energiaedesposicao').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('unhasecabelos').checked == true) ||
+                (document.getElementById('cinquenta').checked == true) &&
+                (document.getElementById('naocomentar').checked == true) &&
+                (document.getElementById('muscular').checked == true)
+            ) {
+                window.open("https://www.panvel.com/panvel/buscarProduto.do?paginaAtual=1&termoPesquisa=%20GSK%20vitaminas%2050%20anos%20ou%20mais");
+            } else {
+                window.open("https://www.panvel.com/panvel/campanha.do?campanhaOfertaLink=2821&filtro=[oferta_desc_campanha=Quiz+GSK]");
+            }
+        }
+    </script>
+
+    <div id="quiz-gsk">
+        <section class="quiz-gsk-section1">
+            <div class="logo-gsk">
+                <img src="https://staticpanvel.com.br/cdn_service/landpages/quiz-gsk/img/gsk-logo.png" alt="Logo GSK">
+            </div>
+            <div class="flat-gsk">
+                <img src="https://staticpanvel.com.br/cdn_service/landpages/quiz-gsk/img/flat.png" alt="Flat GSK">
+            </div>
+            <div class="vitamina-ideal">
+                <div>Você sabe qual é a vitamina ideal para você?</div>
+            </div>
+            <div class="responda-descubra">
+                <div>Responda nosso quiz e descubra!</div>
+            </div>
+            <div class="down-arrow">
+                <img src="https://staticpanvel.com.br/cdn_service/landpages/quiz-gsk/img/down-arrow.png" alt="Seta">
+            </div>
+        </section>
+
+        <section class="quiz-gsk-section2">
+            <form action="">
+                <div class="conteudo">
+                    <div class="title">Qual é a sua faixa etária?</div>
+                    <div class="idade" onchange="habilitaBtn()">
+                        <input id="dezoito" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="dezoito" class="box-gsk" id="div_1" onclick="dezoito();">18-50</label>
+                        <input id="cinquenta" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="cinquenta" class="box-gsk" id="div_2" onclick="cinquenta();">50+</label>
+                    </div>
+                </div>
+
+                <div class="conteudo">
+                    <div class="title ">Qual é o seu gênero?</div>
+                    <div class="genero" onchange="habilitaBtn()">
+                        <input id="homem" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="homem" class="box-gsk" id="div_3" onclick="homem();">homem</label>
+                        <input id="mulher" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="mulher" class="box-gsk" id="div_4" onclick="mulher();">mulher</label>
+                        <input id="naocomentar" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="naocomentar" class="box-gsk" id="div_5" onclick="naocomentar();">prefiro não responder</label>
+                    </div>
+                </div>
+
+                <div class="conteudo">
+                    <div class="title">Qual é o principal benefício que você espera em uma vitamina ou suplemento?</div>
+                    <div class="beneficio" onchange="habilitaBtn()">
+                        <input id="muscular" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="muscular" class="box-gsk" id="div_6" onclick="muscular();">saúde muscular</label>
+                        <input id="unhasecabelos" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="unhasecabelos" class="box-gsk" id="div_7" onclick="unhasecabelos();">saúde de unhas e cabelos</label>
+                        <input id="imunidade" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="imunidade" class="box-gsk" id="div_8" onclick="imunidade();">imunidade</label>
+                        <input id="energiaedesposicao" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="energiaedesposicao" class="box-gsk" id="div_9" onclick="energiaedesposicao();">energia e disposição</label>
+                        <input id="desenvolvimento" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="desenvolvimento" class="box-gsk" id="div_10" onclick="desenvolvimento();">desenvolvimento saudável da criança e bebê</label>
+                        <input id="fortalecimento" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="fortalecimento" class="box-gsk" id="div_11" onclick="fortalecimento();">fortalecimento dos ossos</label>
+                        <input id="saudepele" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="saudepele" class="box-gsk" id="div_12" onclick="saudepele();">saúde da pele(efeitos antioxidade)</label>
+                        <input id="metabolismo" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="metabolismo" class="box-gsk" id="div_13" onclick="metabolismo();">regulação do metabolismo (funções cardíacas e cerebrais)</label>
+                        <input id="visao" type="checkbox" onclick="marcaDesmarca(this.id)">
+                        <label for="visao" class="box-gsk" id="div_14" onclick="visao();">saúde da visão</label>
+                    </div>
+                </div>
+
+                <div class="resultado">
+                    <button id="avancar" type="submit" disabled="disabled" value="avancar" onclick="redirect();">VER RESULTADO</button>
+                </div>
+
+            </form>
+        </section>
+
+    </div>
+</div>
